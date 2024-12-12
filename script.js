@@ -2,15 +2,16 @@ const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
 const loginContainer = document.getElementById('loginContainer');
 const signupContainer = document.getElementById('signupContainer');
-const signupLink = document.getElementById('signupLink');
-const loginLink = document.getElementById('loginLink');
+const toSignup = document.getElementById('toSignup');
+const toLogin = document.getElementById('toLogin');
 const authPage = document.getElementById('authPage');
 const feedPage = document.getElementById('feedPage');
 const profilePage = document.getElementById('profilePage');
 const publishPost = document.getElementById('publishPost');
 const postContent = document.getElementById('postContent');
 const feed = document.getElementById('feed');
-const backToFeed = document.getElementById('backToFeed');
+const toProfile = document.getElementById('toProfile');
+const toFeed = document.getElementById('toFeed');
 const profileUsername = document.getElementById('profileUsername');
 const profileEmail = document.getElementById('profileEmail');
 
@@ -18,12 +19,12 @@ let users = [];
 let currentUser = null;
 let posts = [];
 
-signupLink.addEventListener('click', () => {
+toSignup.addEventListener('click', () => {
     loginContainer.style.display = 'none';
     signupContainer.style.display = 'block';
 });
 
-loginLink.addEventListener('click', () => {
+toLogin.addEventListener('click', () => {
     signupContainer.style.display = 'none';
     loginContainer.style.display = 'block';
 });
@@ -47,8 +48,8 @@ signupForm.addEventListener('submit', (e) => {
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value.trim();
 
     currentUser = users.find(user => user.email === email && user.password === password);
     if (currentUser) {
@@ -78,7 +79,14 @@ function renderFeed() {
     });
 }
 
-backToFeed.addEventListener('click', () => {
+toProfile.addEventListener('click', () => {
+    feedPage.style.display = 'none';
+    profilePage.style.display = 'block';
+    profileUsername.textContent = currentUser.username;
+    profileEmail.textContent = currentUser.email;
+});
+
+toFeed.addEventListener('click', () => {
     profilePage.style.display = 'none';
     feedPage.style.display = 'block';
 });
