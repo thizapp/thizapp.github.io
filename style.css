@@ -17,11 +17,11 @@ header {
     background-color: #1da1f2;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 main {
@@ -34,17 +34,17 @@ main {
 
 .form-container {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
     max-width: 400px;
     text-align: center;
+    width: 100%;
 }
 
 h2 {
     color: #1da1f2;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 form {
@@ -54,19 +54,19 @@ form {
 }
 
 input, textarea {
-    padding: 12px;
-    font-size: 1rem;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 button {
-    padding: 12px;
+    padding: 10px;
     background-color: #1da1f2;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -85,56 +85,25 @@ a:hover {
 }
 
 .feed {
-    margin-top: 20px;
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 .feed li {
     background: white;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 5px;
     margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.post-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-textarea {
-    resize: none;
-}
-
 .profile-container {
-    text-align: center;
     background: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    .form-container {
-        padding: 20px;
-    }
-
-    button {
-        font-size: 1rem;
-        padding: 10px;
-    }
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
 }
