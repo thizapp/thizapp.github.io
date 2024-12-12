@@ -8,24 +8,22 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Thiz</h1>
-        </div>
+        <h1>Thiz</h1>
     </header>
 
     <main>
         <section id="authPage">
-            <div id="loginContainer" class="form-container">
+            <div class="form-container" id="loginContainer">
                 <h2>Entrar</h2>
                 <form id="loginForm">
-                    <input type="email" id="email" placeholder="E-mail" required>
-                    <input type="password" id="password" placeholder="Senha" required>
+                    <input type="email" id="loginEmail" placeholder="E-mail" required>
+                    <input type="password" id="loginPassword" placeholder="Senha" required>
                     <button type="submit">Entrar</button>
                 </form>
-                <p>Ainda não tem uma conta? <a href="#" id="signupLink">Cadastre-se</a></p>
+                <p>Ainda não tem uma conta? <a href="#" id="toSignup">Cadastre-se</a></p>
             </div>
 
-            <div id="signupContainer" class="form-container" style="display: none;">
+            <div class="form-container" id="signupContainer" style="display: none;">
                 <h2>Cadastro</h2>
                 <form id="signupForm">
                     <input type="email" id="signupEmail" placeholder="E-mail" required>
@@ -33,7 +31,7 @@
                     <input type="password" id="signupPassword" placeholder="Senha" required>
                     <button type="submit">Cadastrar</button>
                 </form>
-                <p>Já tem uma conta? <a href="#" id="loginLink">Entrar</a></p>
+                <p>Já tem uma conta? <a href="#" id="toLogin">Entrar</a></p>
             </div>
         </section>
 
@@ -42,15 +40,16 @@
                 <textarea id="postContent" placeholder="O que você está pensando?" rows="3"></textarea>
                 <button id="publishPost">Publicar</button>
             </div>
-            <ul id="feed" class="feed"></ul>
+            <ul id="feed"></ul>
+            <button id="toProfile">Perfil</button>
         </section>
 
         <section id="profilePage" style="display: none;">
             <div class="profile-container">
                 <h2>Perfil</h2>
-                <p id="profileUsername"></p>
-                <p id="profileEmail"></p>
-                <button id="backToFeed">Voltar ao Feed</button>
+                <p><strong>Usuário:</strong> <span id="profileUsername"></span></p>
+                <p><strong>E-mail:</strong> <span id="profileEmail"></span></p>
+                <button id="toFeed">Voltar ao Feed</button>
             </div>
         </section>
     </main>
