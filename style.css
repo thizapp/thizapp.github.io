@@ -29,13 +29,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .form-container {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
     max-width: 400px;
     text-align: center;
 }
@@ -51,21 +53,22 @@ form {
     gap: 10px;
 }
 
-input {
-    padding: 10px;
+input, textarea {
+    padding: 12px;
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
     background-color: #1da1f2;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -89,8 +92,49 @@ a:hover {
 
 .feed li {
     background: white;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 10px;
     margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    resize: none;
+}
+
+.profile-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
 }
