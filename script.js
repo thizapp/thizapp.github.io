@@ -16,6 +16,7 @@ const profileEmail = document.getElementById('profileEmail');
 
 let users = [];
 let currentUser = null;
+let posts = [];
 
 signupLink.addEventListener('click', () => {
     loginContainer.style.display = 'none';
@@ -53,6 +54,7 @@ loginForm.addEventListener('submit', (e) => {
     if (currentUser) {
         authPage.style.display = 'none';
         feedPage.style.display = 'block';
+        renderFeed();
     } else {
         alert('Usuário ou senha inválidos.');
     }
@@ -61,19 +63,20 @@ loginForm.addEventListener('submit', (e) => {
 publishPost.addEventListener('click', () => {
     const content = postContent.value.trim();
     if (content) {
-        const post = document.createElement('li');
-        post.textContent = content;
-        feed.appendChild(post);
+        posts.push({ username: currentUser.username, content });
         postContent.value = '';
+        renderFeed();
     }
 });
 
-document.getElementById('profilePage').addEventListener('click', () => {
-    feedPage.style.display = 'none';
-    profilePage.style.display = 'block';
-    profileUsername.textContent = currentUser.username;
-    profileEmail.textContent = currentUser.email;
-});
+function renderFeed() {
+    feed.innerHTML = '';
+    posts.forEach(post => {
+        const postElement = document.createElement('li');
+        postElement.innerHTML = `<strong>${post.username}:</strong> ${post.content}`;
+        feed.appendChild(postElement);
+    });
+}
 
 backToFeed.addEventListener('click', () => {
     profilePage.style.display = 'none';
