@@ -14,48 +14,49 @@
     </header>
 
     <main>
-        <section class="auth-page" id="authPage">
-            <div class="form-container login-form" id="loginContainer">
-                <h2>Entrar no Thiz</h2>
+        <section id="authPage">
+            <div id="loginContainer" class="form-container">
+                <h2>Entrar</h2>
                 <form id="loginForm">
-                    <input type="email" placeholder="E-mail" id="email" required>
-                    <input type="password" placeholder="Senha" id="password" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <input type="password" id="password" placeholder="Senha" required>
                     <button type="submit">Entrar</button>
                 </form>
                 <p>Ainda não tem uma conta? <a href="#" id="signupLink">Cadastre-se</a></p>
             </div>
 
-            <div class="form-container signup-form" id="signupContainer" style="display: none;">
-                <h2>Criar uma conta no Thiz</h2>
+            <div id="signupContainer" class="form-container" style="display: none;">
+                <h2>Cadastro</h2>
                 <form id="signupForm">
-                    <input type="email" placeholder="E-mail" id="signupEmail" required>
-                    <input type="text" placeholder="Nome de usuário" id="signupUsername" required>
-                    <input type="password" placeholder="Senha" id="signupPassword" required>
+                    <input type="email" id="signupEmail" placeholder="E-mail" required>
+                    <input type="text" id="signupUsername" placeholder="Nome de usuário" required>
+                    <input type="password" id="signupPassword" placeholder="Senha" required>
                     <button type="submit">Cadastrar</button>
                 </form>
                 <p>Já tem uma conta? <a href="#" id="loginLink">Entrar</a></p>
             </div>
         </section>
 
-        <section class="feed-page" id="feedPage" style="display: none;">
+        <section id="feedPage" style="display: none;">
             <div class="post-form">
                 <textarea id="postContent" placeholder="O que você está pensando?" rows="3"></textarea>
                 <button id="publishPost">Publicar</button>
             </div>
-            <ul class="feed" id="feed"></ul>
+            <ul id="feed" class="feed"></ul>
         </section>
 
-        <section class="profile-page" id="profilePage" style="display: none;">
-            <div class="profile-header">
-                <div class="profile-pic" id="profilePic"></div>
-                <h2 id="profileUsername"></h2>
+        <section id="profilePage" style="display: none;">
+            <div class="profile-container">
+                <h2>Perfil</h2>
+                <p id="profileUsername"></p>
                 <p id="profileEmail"></p>
                 <button id="backToFeed">Voltar ao Feed</button>
             </div>
         </section>
-      </main>
+    </main>
 
     <footer>
+        <p>&copy; 2024 Thiz - Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
